@@ -9,18 +9,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 let feedbacks = [];
-
-// Default route
 app.get("/", (req, res) => {
   res.send("Feedback Server Running");
 });
-
-// Get all feedbacks
 app.get("/api/feedback", (req, res) => {
   res.json(feedbacks);
 });
-
-// Submit feedback
 app.post("/api/feedback", (req, res) => {
   const feedbackData = req.body;
 
