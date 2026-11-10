@@ -1,45 +1,132 @@
-.container {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 2px 2px 12px #aaa;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 h1 {
   text-align: center;
-  color: #333;
-}
-
-.feedback-form {
-  display: flex;
-  flex-direction: column;
+  color: #4338ca;
+  margin-bottom: 25px;
 }
 
 label {
-  margin-top: 10px;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 7px;
   font-weight: bold;
+  color: #333;
 }
 
-input {
-  margin-top: 5px;
-  padding: 8px;
-  border: 1px solid #999;
-  border-radius: 5px;
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6366f1;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 75px;
 }
 
 button {
+  width: 100%;
+  padding: 13px;
   margin-top: 20px;
-  padding: 10px;
-  background-color: #0078d7;
+  background: #4f46e5;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #005fa3;
+  background: #3730a3;
+}
+
+.success-message {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.feedback-section {
+  margin-top: 30px;
+}
+
+.feedback-section h2 {
+  color: #4338ca;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.empty-message {
+  color: #777;
+  text-align: center;
+}
+
+.feedback-card {
+  background: #f0f4ff;
+  border-left: 5px solid #4f46e5;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.feedback-card h3 {
+  color: #3730a3;
+  margin-top: 0;
+}
+
+.feedback-card p {
+  line-height: 1.5;
+}
+
+.feedback-card .delete-button {
+  background: #dc2626;
+  width: auto;
+  padding: 9px 18px;
+  margin-top: 8px;
+}
+
+.feedback-card .delete-button:hover {
+  background: #991b1b;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
 }
