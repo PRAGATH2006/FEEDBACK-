@@ -147,7 +147,6 @@ function App() {
             No feedback submitted yet.
           </p>
         ) : (
-
           feedbackList.map((item) => (
 
             <div className="feedback-card" key={item.id}>
